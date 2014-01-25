@@ -3,12 +3,13 @@ package main
 import (
 	"encoding/json"
 	"github.com/nu7hatch/gouuid"
+	"labix.org/v2/mgo/bson"
 	"log"
 	"net/http"
 )
 
 type RegistrationResp struct {
-	Guid string
+	Id string
 }
 
 // This handler will now serve HTTP, HTTPS, and SPDY requests.
@@ -19,13 +20,13 @@ func (server *Server) Register(w http.ResponseWriter, r *http.Request) {
 
 	id, err := uuid.NewV4()
 	user := User{}
-	user.id = id.String()
+	user.Id = id.String()
 	err = c.Insert(user)
 	if err != nil {
 		log.Println(err)
 	}
 	resp := RegistrationResp{}
-	resp.Guid = user.id
+	resp.Id = user.Id
 	enc := json.NewEncoder(w)
 	if err := enc.Encode(&resp); err != nil {
 		log.Println(err)
@@ -33,23 +34,21 @@ func (server *Server) Register(w http.ResponseWriter, r *http.Request) {
 	session.Close()
 }
 func (server *Server) UpdateUserDetails(w http.ResponseWriter, r *http.Request) {
+	decoder := json.NewDecoder(r.Body)
+	var u User
+	err := decoder.Decode(&u)
+	if err != nil {
+		http.Error(w, "Invalid Request", http.StatusBadRequest)
+	}
+	u._id = u.Id
 	session := server.db.New()
 	c := session.DB("lsp").C("users")
-	w.Header().Set("Content-Type", "application/json")
 
-	id, err := uuid.NewV4()
-	user := User{}
-	user.id = id.String()
-	err = c.Insert(user)
+	err = c.Update(bson.M{"_id": u.Id}, &u)
 	if err != nil {
 		log.Println(err)
 	}
-	resp := RegistrationResp{}
-	resp.Guid = user.id
-	enc := json.NewEncoder(w)
-	if err := enc.Encode(&resp); err != nil {
-		log.Println(err)
-	}
+	w.Write([]byte("Success"))
 	session.Close()
 }
 func (server *Server) Feed(w http.ResponseWriter, r *http.Request) {

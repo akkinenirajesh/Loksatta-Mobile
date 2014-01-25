@@ -13,11 +13,22 @@ import (
 type Server struct {
 	db *mgo.Session
 }
-
+type GPSPosition struct {
+	Latitude  float64
+	Longitude float64
+}
 type User struct {
-	id    string
-	name  string
-	email string
+	_id                string
+	Id                 string
+	Name               string
+	Email              string
+	MembershipId       string
+	State              string
+	District           string
+	Constituency       string
+	EventNotifications bool
+	NotificationRadius int8
+	Locaiton           GPSPosition
 }
 
 func SetUpRoutes(server *Server) {
@@ -26,7 +37,7 @@ func SetUpRoutes(server *Server) {
 	s := r.PathPrefix("/api/v1/").Subrouter()
 	// API Handlers
 	s.HandleFunc("/register", server.Register)
-	s.HandleFunc("/update", server.UpdateUserDetails)
+	s.HandleFunc("/update", server.UpdateUserDetails).Methods("POST")
 	s.HandleFunc("/feed", server.Feed)
 	s.HandleFunc("/feed/since/{date}", server.FeedSince)
 	s.HandleFunc("/feed/since/{date}", server.FeedSince)
