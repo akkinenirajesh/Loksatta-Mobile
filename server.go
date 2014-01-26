@@ -6,8 +6,10 @@ import (
 	"github.com/gorilla/mux"
 	"github.com/huandu/facebook"
 	"labix.org/v2/mgo"
+	"labix.org/v2/mgo/bson"
 	"log"
 	"net/http"
+	"time"
 )
 
 type Server struct {
@@ -18,8 +20,7 @@ type GPSPosition struct {
 	Longitude float64
 }
 type User struct {
-	_id                string
-	Id                 string
+	Id                 bson.ObjectId "_id,omitempty"
 	Name               string
 	Email              string
 	MembershipId       string
@@ -30,6 +31,64 @@ type User struct {
 	NotificationRadius int8
 	Locaiton           GPSPosition
 }
+type Feed struct {
+	Id            bson.ObjectId "_id,omitempty"
+	AuthorName    string
+	AuthorId      string
+	CreatedAt     time.Time
+	UpdatedAt     time.Time
+	Title         string
+	Summary       string
+	Content       string
+	Link          string
+	FacebookId    string
+	GPlusId       string
+	LikesCount    int32
+	ShareCount    int32
+	CommentsCount int32
+	Images        []string
+}
+type Photo struct {
+	Id            bson.ObjectId "_id,omitempty"
+	AuthorName    string
+	AuthorId      string
+	CreatedAt     string
+	UpdatedAt     string
+	Title         string
+	FacebookId    string
+	GPlusId       string
+	LikesCount    int32
+	ShareCount    int32
+	CommentsCount int32
+}
+type Video struct {
+	Id            bson.ObjectId "_id,omitempty"
+	AuthorName    string
+	AuthorId      string
+	CreatedAt     string
+	UpdatedAt     string
+	Title         string
+	YouTubeId     string
+	FacebookId    string
+	GPlusId       string
+	LikesCount    int32
+	ShareCount    int32
+	CommentsCount int32
+}
+type Event struct {
+	Id            bson.ObjectId "_id,omitempty"
+	AuthorName    string
+	AuthorId      string
+	CreatedAt     string
+	UpdatedAt     string
+	Title         string
+	YouTubeId     string
+	FacebookId    string
+	GPlusId       string
+	LikesCount    int32
+	ShareCount    int32
+	CommentsCount int32
+}
 
 func SetUpRoutes(server *Server) {
 
@@ -39,12 +98,11 @@ func SetUpRoutes(server *Server) {
 	s.HandleFunc("/register", server.Register)
 	s.HandleFunc("/update", server.UpdateUserDetails).Methods("POST")
 	s.HandleFunc("/feed", server.Feed)
-	s.HandleFunc("/feed/since/{date}", server.FeedSince)
-	s.HandleFunc("/feed/since/{date}", server.FeedSince)
+	s.HandleFunc("/feed/since/{date}", server.Feed)
 	s.HandleFunc("/gallery/photos", server.GalleryPhotos)
-	s.HandleFunc("/gallery/photos/since/{date}", server.GalleryPhotosSince)
-	s.HandleFunc("/gallery/videos/", server.GalleryVideos)
-	s.HandleFunc("/gallery/videos/since/{date}", server.GalleryVideosSince)
+	s.HandleFunc("/gallery/photos/since/{date}", server.GalleryPhotos)
+	s.HandleFunc("/gallery/videos", server.GalleryVideos)
+	s.HandleFunc("/gallery/videos/since/{date}", server.GalleryVideos)
 	s.HandleFunc("/events", server.Events)
 	s.HandleFunc("/events/since/{date}", server.Events)
 	s.HandleFunc("/leaders/{state}/", server.Leaders)
