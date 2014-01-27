@@ -1,5 +1,7 @@
 package org.loksatta.android.core;
 
+import java.util.Date;
+
 public abstract class AbstractCore {
 
 	/**
@@ -10,12 +12,12 @@ public abstract class AbstractCore {
 	/**
 	 * Created AT
 	 */
-	private String createdAt;
+	private Date createdAt;
 
 	/**
 	 * Last Updated At
 	 */
-	private String updatedAt;
+	private Date updatedAt;
 
 	/**
 	 * link to the main website
@@ -40,7 +42,7 @@ public abstract class AbstractCore {
 	/**
 	 * @return the createdAt
 	 */
-	public String getCreatedAt() {
+	public Date getCreatedAt() {
 		return createdAt;
 	}
 
@@ -48,14 +50,14 @@ public abstract class AbstractCore {
 	 * @param createdAt
 	 *            the createdAt to set
 	 */
-	public void setCreatedAt(String createdAt) {
+	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
 
 	/**
 	 * @return the updatedAt
 	 */
-	public String getUpdatedAt() {
+	public Date getUpdatedAt() {
 		return updatedAt;
 	}
 
@@ -63,7 +65,7 @@ public abstract class AbstractCore {
 	 * @param updatedAt
 	 *            the updatedAt to set
 	 */
-	public void setUpdatedAt(String updatedAt) {
+	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
 

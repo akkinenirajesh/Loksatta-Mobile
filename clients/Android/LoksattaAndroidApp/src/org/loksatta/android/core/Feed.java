@@ -13,7 +13,7 @@ public class Feed extends AbstractCore {
 	/**
 	 * Identity of the Author of this feed if any
 	 */
-	private String authodId;
+	private String authorId;
 
 	/**
 	 * Title of the Feed
@@ -33,17 +33,17 @@ public class Feed extends AbstractCore {
 	/**
 	 * Facebook Id
 	 */
-	private String fbId;
+	private String facebookId;
 
 	/**
 	 * Google Plus Id
 	 */
-	private String gId;
+	private String gPlusId;
 
 	/**
 	 * Id of the Twitter
 	 */
-	private String tId;
+	private String twitterId;
 
 	/**
 	 * No. Of Likes
@@ -81,18 +81,18 @@ public class Feed extends AbstractCore {
 	}
 
 	/**
-	 * @return the authodId
+	 * @return the authorId
 	 */
-	public String getAuthodId() {
-		return authodId;
+	public String getAuthorId() {
+		return authorId;
 	}
 
 	/**
-	 * @param authodId
-	 *            the authodId to set
+	 * @param authorId
+	 *            the authorId to set
 	 */
-	public void setAuthodId(String authodId) {
-		this.authodId = authodId;
+	public void setAuthorId(String authorId) {
+		this.authorId = authorId;
 	}
 
 	/**
@@ -138,51 +138,6 @@ public class Feed extends AbstractCore {
 	 */
 	public void setContent(String content) {
 		this.content = content;
-	}
-
-	/**
-	 * @return the fbId
-	 */
-	public String getFbId() {
-		return fbId;
-	}
-
-	/**
-	 * @param fbId
-	 *            the fbId to set
-	 */
-	public void setFbId(String fbId) {
-		this.fbId = fbId;
-	}
-
-	/**
-	 * @return the gId
-	 */
-	public String getgId() {
-		return gId;
-	}
-
-	/**
-	 * @param gId
-	 *            the gId to set
-	 */
-	public void setgId(String gId) {
-		this.gId = gId;
-	}
-
-	/**
-	 * @return the tId
-	 */
-	public String gettId() {
-		return tId;
-	}
-
-	/**
-	 * @param tId
-	 *            the tId to set
-	 */
-	public void settId(String tId) {
-		this.tId = tId;
 	}
 
 	/**
@@ -243,6 +198,51 @@ public class Feed extends AbstractCore {
 	 */
 	public void setImages(String[] images) {
 		this.images = images;
+	}
+
+	/**
+	 * @return the facebookId
+	 */
+	public String getFacebookId() {
+		return facebookId;
+	}
+
+	/**
+	 * @param facebookId
+	 *            the facebookId to set
+	 */
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
+	}
+
+	/**
+	 * @return the gPlusId
+	 */
+	public String getgPlusId() {
+		return gPlusId;
+	}
+
+	/**
+	 * @param gPlusId
+	 *            the gPlusId to set
+	 */
+	public void setgPlusId(String gPlusId) {
+		this.gPlusId = gPlusId;
+	}
+
+	/**
+	 * @return the twitterId
+	 */
+	public String getTwitterId() {
+		return twitterId;
+	}
+
+	/**
+	 * @param twitterId
+	 *            the twitterId to set
+	 */
+	public void setTwitterId(String twitterId) {
+		this.twitterId = twitterId;
 	}
 
 }
