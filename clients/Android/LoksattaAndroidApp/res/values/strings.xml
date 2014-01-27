@@ -4,5 +4,7 @@
     <string name="app_name">Loksatta Android App</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="banner_text">LOK SATTA</string>
+    <string name="elections_text">2014 Elections</string>
 
 </resources>

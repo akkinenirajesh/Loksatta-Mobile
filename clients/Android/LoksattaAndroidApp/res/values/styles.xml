@@ -17,7 +17,7 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
     
-     <style name="WelcomeScreen" parent="android:Theme.Light">
+     <style name="splash_background" parent="android:Theme.Light">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 

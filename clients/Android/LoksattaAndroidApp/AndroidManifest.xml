@@ -6,22 +6,32 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
+        <!-- Splash screen -->
         <activity
-            android:name="org.loksatta.android.MainActivity"
+            android:name="org.loksatta.android.SplashScreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+         <!-- Main activity -->
+          <activity android:name=".MainActivity" />
+          <activity android:name=".NewsFeedActivity" />
+          <activity android:name=".LeadersActivity" />
+          <activity android:name=".DonateActivity" />
+          <activity android:name=".VolunteersActivity" />
+          <activity android:name=".AboutActivity" />
+          <activity android:name=".GalleryActivity" />
     </application>
 
 </manifest>

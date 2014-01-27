@@ -8,34 +8,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <LinearLayout android:orientation="horizontal" >
+        <TextView
+            android:drawableLeft="@drawable/loksatta_logo"
+            android:text="@string/banner_text" android:onClick="onBannerClick">
+        </TextView>
+        <Button
+            android:onClick="onElections"
+            android:text="@string/elections_text" />
+    </LinearLayout>
 
-    <TabHost
-        android:id="@android:id/tabhost"
+    <TabHost 
+        android:id="@+id/tabhost"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" >
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="vertical"
-            android:padding="5dp" >
+            android:orientation="vertical" >
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:padding="5dp" />
+                android:layout_height="0dip"
+                android:layout_weight="1" />
 
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="-4dp"
                 android:layout_weight="0" />
         </LinearLayout>
     </TabHost>
