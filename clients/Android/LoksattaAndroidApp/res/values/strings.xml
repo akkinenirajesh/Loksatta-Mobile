@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="banner_text">LOK SATTA</string>
     <string name="elections_text">2014 Elections</string>
+    <string name="leaders_title">Leaders</string>
 
 </resources>
