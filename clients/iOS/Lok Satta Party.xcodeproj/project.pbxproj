@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CB237D7718952B490088A995 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D7618952B490088A995 /* Foundation.framework */; };
+		CB237D7918952B490088A995 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D7818952B490088A995 /* CoreGraphics.framework */; };
+		CB237D7B18952B490088A995 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D7A18952B490088A995 /* UIKit.framework */; };
+		CB237D8118952B490088A995 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB237D7F18952B490088A995 /* InfoPlist.strings */; };
+		CB237D8318952B490088A995 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237D8218952B490088A995 /* main.m */; };
+		CB237D8718952B490088A995 /* LSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237D8618952B490088A995 /* LSAppDelegate.m */; };
+		CB237D8A18952B490088A995 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB237D8818952B490088A995 /* Main_iPhone.storyboard */; };
+		CB237D8D18952B490088A995 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB237D8B18952B490088A995 /* Main_iPad.storyboard */; };
+		CB237D9018952B490088A995 /* LSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237D8F18952B490088A995 /* LSViewController.m */; };
+		CB237D9218952B490088A995 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB237D9118952B490088A995 /* Images.xcassets */; };
+		CB237D9918952B490088A995 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D9818952B490088A995 /* XCTest.framework */; };
+		CB237D9A18952B490088A995 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D7618952B490088A995 /* Foundation.framework */; };
+		CB237D9B18952B490088A995 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D7A18952B490088A995 /* UIKit.framework */; };
+		CB237DA318952B490088A995 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB237DA118952B490088A995 /* InfoPlist.strings */; };
+		CB237DA518952B490088A995 /* Lok_Satta_PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DA418952B490088A995 /* Lok_Satta_PartyTests.m */; };
+		CB237DB018952BF60088A995 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DAF18952BF60088A995 /* SplashView.m */; };
+		CB237DB218952C2C0088A995 /* bigicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB237DB118952C2C0088A995 /* bigicon.png */; };
+		CB237DB518952EC60088A995 /* LSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DB418952EC60088A995 /* LSNewsViewController.m */; };
+		CB237DB818952EE50088A995 /* LSLeadersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DB718952EE50088A995 /* LSLeadersViewController.m */; };
+		CB237DBB18952F000088A995 /* LSDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DBA18952F000088A995 /* LSDonateViewController.m */; };
+		CB237DBE189533080088A995 /* LSVolunteerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DBD189533080088A995 /* LSVolunteerViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CB237D9C18952B490088A995 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CB237D6B18952B490088A995 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB237D7218952B490088A995;
+			remoteInfo = "Lok Satta Party";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CB237D7318952B490088A995 /* Lok Satta Party.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lok Satta Party.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB237D7618952B490088A995 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CB237D7818952B490088A995 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CB237D7A18952B490088A995 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CB237D7E18952B490088A995 /* Lok Satta Party-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lok Satta Party-Info.plist"; sourceTree = "<group>"; };
+		CB237D8018952B490088A995 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB237D8218952B490088A995 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CB237D8418952B490088A995 /* Lok Satta Party-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lok Satta Party-Prefix.pch"; sourceTree = "<group>"; };
+		CB237D8518952B490088A995 /* LSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSAppDelegate.h; sourceTree = "<group>"; };
+		CB237D8618952B490088A995 /* LSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSAppDelegate.m; sourceTree = "<group>"; };
+		CB237D8918952B490088A995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		CB237D8C18952B490088A995 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		CB237D8E18952B490088A995 /* LSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSViewController.h; sourceTree = "<group>"; };
+		CB237D8F18952B490088A995 /* LSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSViewController.m; sourceTree = "<group>"; };
+		CB237D9118952B490088A995 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CB237D9718952B490088A995 /* Lok Satta PartyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lok Satta PartyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB237D9818952B490088A995 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CB237DA018952B490088A995 /* Lok Satta PartyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lok Satta PartyTests-Info.plist"; sourceTree = "<group>"; };
+		CB237DA218952B490088A995 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CB237DA418952B490088A995 /* Lok_Satta_PartyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lok_Satta_PartyTests.m; sourceTree = "<group>"; };
+		CB237DAE18952BF60088A995 /* SplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashView.h; path = "../../Lok Satta/Lok Satta/SplashView.h"; sourceTree = "<group>"; };
+		CB237DAF18952BF60088A995 /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashView.m; path = "../../Lok Satta/Lok Satta/SplashView.m"; sourceTree = "<group>"; };
+		CB237DB118952C2C0088A995 /* bigicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigicon.png; path = ../../bigicon.png; sourceTree = "<group>"; };
+		CB237DB318952EC60088A995 /* LSNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNewsViewController.h; sourceTree = "<group>"; };
+		CB237DB418952EC60088A995 /* LSNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNewsViewController.m; sourceTree = "<group>"; };
+		CB237DB618952EE50088A995 /* LSLeadersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLeadersViewController.h; sourceTree = "<group>"; };
+		CB237DB718952EE50088A995 /* LSLeadersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLeadersViewController.m; sourceTree = "<group>"; };
+		CB237DB918952F000088A995 /* LSDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSDonateViewController.h; sourceTree = "<group>"; };
+		CB237DBA18952F000088A995 /* LSDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSDonateViewController.m; sourceTree = "<group>"; };
+		CB237DBC189533080088A995 /* LSVolunteerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSVolunteerViewController.h; sourceTree = "<group>"; };
+		CB237DBD189533080088A995 /* LSVolunteerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSVolunteerViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CB237D7018952B490088A995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB237D7918952B490088A995 /* CoreGraphics.framework in Frameworks */,
+				CB237D7B18952B490088A995 /* UIKit.framework in Frameworks */,
+				CB237D7718952B490088A995 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB237D9418952B490088A995 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB237D9918952B490088A995 /* XCTest.framework in Frameworks */,
+				CB237D9B18952B490088A995 /* UIKit.framework in Frameworks */,
+				CB237D9A18952B490088A995 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB237D6A18952B490088A995 = {
+			isa = PBXGroup;
+			children = (
+				CB237D7C18952B490088A995 /* Lok Satta Party */,
+				CB237D9E18952B490088A995 /* Lok Satta PartyTests */,
+				CB237D7518952B490088A995 /* Frameworks */,
+				CB237D7418952B490088A995 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CB237D7418952B490088A995 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CB237D7318952B490088A995 /* Lok Satta Party.app */,
+				CB237D9718952B490088A995 /* Lok Satta PartyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CB237D7518952B490088A995 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB237D7618952B490088A995 /* Foundation.framework */,
+				CB237D7818952B490088A995 /* CoreGraphics.framework */,
+				CB237D7A18952B490088A995 /* UIKit.framework */,
+				CB237D9818952B490088A995 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB237D7C18952B490088A995 /* Lok Satta Party */ = {
+			isa = PBXGroup;
+			children = (
+				CB237DB118952C2C0088A995 /* bigicon.png */,
+				CB237DAE18952BF60088A995 /* SplashView.h */,
+				CB237DAF18952BF60088A995 /* SplashView.m */,
+				CB237D8518952B490088A995 /* LSAppDelegate.h */,
+				CB237D8618952B490088A995 /* LSAppDelegate.m */,
+				CB237D8818952B490088A995 /* Main_iPhone.storyboard */,
+				CB237D8B18952B490088A995 /* Main_iPad.storyboard */,
+				CB237D8E18952B490088A995 /* LSViewController.h */,
+				CB237D8F18952B490088A995 /* LSViewController.m */,
+				CB237D9118952B490088A995 /* Images.xcassets */,
+				CB237D7D18952B490088A995 /* Supporting Files */,
+				CB237DB318952EC60088A995 /* LSNewsViewController.h */,
+				CB237DB418952EC60088A995 /* LSNewsViewController.m */,
+				CB237DBC189533080088A995 /* LSVolunteerViewController.h */,
+				CB237DBD189533080088A995 /* LSVolunteerViewController.m */,
+				CB237DB618952EE50088A995 /* LSLeadersViewController.h */,
+				CB237DB718952EE50088A995 /* LSLeadersViewController.m */,
+				CB237DB918952F000088A995 /* LSDonateViewController.h */,
+				CB237DBA18952F000088A995 /* LSDonateViewController.m */,
+			);
+			path = "Lok Satta Party";
+			sourceTree = "<group>";
+		};
+		CB237D7D18952B490088A995 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB237D7E18952B490088A995 /* Lok Satta Party-Info.plist */,
+				CB237D7F18952B490088A995 /* InfoPlist.strings */,
+				CB237D8218952B490088A995 /* main.m */,
+				CB237D8418952B490088A995 /* Lok Satta Party-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CB237D9E18952B490088A995 /* Lok Satta PartyTests */ = {
+			isa = PBXGroup;
+			children = (
+				CB237DA418952B490088A995 /* Lok_Satta_PartyTests.m */,
+				CB237D9F18952B490088A995 /* Supporting Files */,
+			);
+			path = "Lok Satta PartyTests";
+			sourceTree = "<group>";
+		};
+		CB237D9F18952B490088A995 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB237DA018952B490088A995 /* Lok Satta PartyTests-Info.plist */,
+				CB237DA118952B490088A995 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB237D7218952B490088A995 /* Lok Satta Party */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB237DA818952B490088A995 /* Build configuration list for PBXNativeTarget "Lok Satta Party" */;
+			buildPhases = (
+				CB237D6F18952B490088A995 /* Sources */,
+				CB237D7018952B490088A995 /* Frameworks */,
+				CB237D7118952B490088A995 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lok Satta Party";
+			productName = "Lok Satta Party";
+			productReference = CB237D7318952B490088A995 /* Lok Satta Party.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CB237D9618952B490088A995 /* Lok Satta PartyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB237DAB18952B490088A995 /* Build configuration list for PBXNativeTarget "Lok Satta PartyTests" */;
+			buildPhases = (
+				CB237D9318952B490088A995 /* Sources */,
+				CB237D9418952B490088A995 /* Frameworks */,
+				CB237D9518952B490088A995 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB237D9D18952B490088A995 /* PBXTargetDependency */,
+			);
+			name = "Lok Satta PartyTests";
+			productName = "Lok Satta PartyTests";
+			productReference = CB237D9718952B490088A995 /* Lok Satta PartyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CB237D6B18952B490088A995 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LS;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Vimukti 22";
+				TargetAttributes = {
+					CB237D9618952B490088A995 = {
+						TestTargetID = CB237D7218952B490088A995;
+					};
+				};
+			};
+			buildConfigurationList = CB237D6E18952B490088A995 /* Build configuration list for PBXProject "Lok Satta Party" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CB237D6A18952B490088A995;
+			productRefGroup = CB237D7418952B490088A995 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB237D7218952B490088A995 /* Lok Satta Party */,
+				CB237D9618952B490088A995 /* Lok Satta PartyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB237D7118952B490088A995 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB237D8D18952B490088A995 /* Main_iPad.storyboard in Resources */,
+				CB237D9218952B490088A995 /* Images.xcassets in Resources */,
+				CB237DB218952C2C0088A995 /* bigicon.png in Resources */,
+				CB237D8A18952B490088A995 /* Main_iPhone.storyboard in Resources */,
+				CB237D8118952B490088A995 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB237D9518952B490088A995 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB237DA318952B490088A995 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CB237D6F18952B490088A995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB237DBE189533080088A995 /* LSVolunteerViewController.m in Sources */,
+				CB237DB518952EC60088A995 /* LSNewsViewController.m in Sources */,
+				CB237D8318952B490088A995 /* main.m in Sources */,
+				CB237DB018952BF60088A995 /* SplashView.m in Sources */,
+				CB237D8718952B490088A995 /* LSAppDelegate.m in Sources */,
+				CB237D9018952B490088A995 /* LSViewController.m in Sources */,
+				CB237DB818952EE50088A995 /* LSLeadersViewController.m in Sources */,
+				CB237DBB18952F000088A995 /* LSDonateViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB237D9318952B490088A995 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB237DA518952B490088A995 /* Lok_Satta_PartyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CB237D9D18952B490088A995 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB237D7218952B490088A995 /* Lok Satta Party */;
+			targetProxy = CB237D9C18952B490088A995 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CB237D7F18952B490088A995 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB237D8018952B490088A995 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CB237D8818952B490088A995 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB237D8918952B490088A995 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		CB237D8B18952B490088A995 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB237D8C18952B490088A995 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		CB237DA118952B490088A995 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CB237DA218952B490088A995 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CB237DA618952B490088A995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CB237DA718952B490088A995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB237DA918952B490088A995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lok Satta Party/Lok Satta Party-Prefix.pch";
+				INFOPLIST_FILE = "Lok Satta Party/Lok Satta Party-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CB237DAA18952B490088A995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lok Satta Party/Lok Satta Party-Prefix.pch";
+				INFOPLIST_FILE = "Lok Satta Party/Lok Satta Party-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CB237DAC18952B490088A995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lok Satta Party.app/Lok Satta Party";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lok Satta Party/Lok Satta Party-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lok Satta PartyTests/Lok Satta PartyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CB237DAD18952B490088A995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lok Satta Party.app/Lok Satta Party";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lok Satta Party/Lok Satta Party-Prefix.pch";
+				INFOPLIST_FILE = "Lok Satta PartyTests/Lok Satta PartyTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CB237D6E18952B490088A995 /* Build configuration list for PBXProject "Lok Satta Party" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB237DA618952B490088A995 /* Debug */,
+				CB237DA718952B490088A995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CB237DA818952B490088A995 /* Build configuration list for PBXNativeTarget "Lok Satta Party" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB237DA918952B490088A995 /* Debug */,
+				CB237DAA18952B490088A995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB237DAB18952B490088A995 /* Build configuration list for PBXNativeTarget "Lok Satta PartyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB237DAC18952B490088A995 /* Debug */,
+				CB237DAD18952B490088A995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CB237D6B18952B490088A995 /* Project object */;
+}
