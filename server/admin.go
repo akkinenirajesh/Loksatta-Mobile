@@ -1,9 +1,9 @@
 package main
 
 import (
-    "net/http"
+	"net/http"
 )
 
 func (*Server) AdminLogin(w http.ResponseWriter, r *http.Request) {
-    w.Write([]byte("Hello, HTTP!"))
+	w.Write([]byte("Hello, HTTP!"))
 }

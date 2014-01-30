@@ -1,4 +1,0 @@
-{
-	"db": "mongodb://lsptest:lsptest@troup.mongohq.com:10051/lsp",
-	"images": "c:\\images"
-}

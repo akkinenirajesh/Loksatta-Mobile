@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	//"github.com/SlyMarbo/spdy" // Import SPDY.
 	"encoding/json"
 	"errors"
 	"github.com/gorilla/mux"
@@ -17,8 +15,10 @@ import (
 )
 
 type Config struct {
-	db     string
-	images string
+	DatabaseUrl       string
+	ImagesPath        string
+	FacebookAppId     string
+	FacebookAppSecret string
 }
 
 type Server struct {
@@ -40,6 +40,9 @@ type User struct {
 	EventNotifications bool
 	NotificationRadius int8
 	Locaiton           GPSPosition
+	FacebookId 	       string
+	TwitterId 	       string
+	GPlusId            string
 }
 type Feed struct {
 	Id            bson.ObjectId "_id,omitempty"
@@ -309,7 +312,7 @@ func SetUpRoutes(server *Server) {
 	s.HandleFunc("/leaders/{state}/{district}/", server.Leaders)
 	s.HandleFunc("/leaders/{state}/{district}/{const}", server.Leaders)
 
-	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir(server.config.images))))
+	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir(server.config.ImagesPath))))
 
 	//Admin Section
 	a := r.PathPrefix("/admin/").Subrouter()
@@ -333,10 +336,14 @@ func main() {
 		log.Println("parsing config file", err.Error())
 		os.Exit(1)
 	}
+	//log.Println(config)
+	TestFacebook(&config)
+
+	return
 
 	server.config = &config
 	//"mongodb://lsptest:lsptest@troup.mongohq.com:10051/lsp"
-	session, err := mgo.Dial(config.db)
+	session, err := mgo.Dial(config.DatabaseUrl)
 	if err != nil {
 		log.Println(err)
 	}
@@ -351,12 +358,10 @@ func main() {
 		//if err != nil {
 		// handle error.
 		//log.Println(err)
-		http.ListenAndServe(":8080", nil)
+		//http.ListenAndServe(":8080", nil)
 		//}
 	}
 
-	res, _ := facebook.Get("/loksattaparty.india/feed", nil)
-	fmt.Println("my facebook id is", res)
 	// s := &http.Server{
 	//     Addr:           ":8080",
 	//     Handler:        myHandler,
@@ -365,5 +370,18 @@ func main() {
 	//     MaxHeaderBytes: 1 << 20,
 	// }
 	// log.Fatal(s.ListenAndServe())
-
+	TestFacebook(server.config)
+}
+func TestFacebook(config *Config) {
+	//log.Println(config.FacebookAppId)
+	// create a global App var to hold your app id and secret.
+	var fb = facebook.New(config.FacebookAppId, config.FacebookAppSecret)
+	res, _ := facebook.Get("/150786351645251/posts?limit=1", facebook.Params{
+		"access_token": fb.AppAccessToken(),
+	})
+	r, err := json.Marshal(res)
+	if err != nil {
+		log.Println(err)
+	}
+	os.Stdout.Write(r)
 }

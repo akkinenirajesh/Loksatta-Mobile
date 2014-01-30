@@ -1,0 +1,14 @@
+{
+  "DatabaseUrl": "mongodb://lsptest:lsptest@troup.mongohq.com:10051/lsp",
+  "ImagesPath": "/images",
+  "Facebook": {
+    "AppId": "532781443496622",
+    "AppSecret": "2bff5f7e932565c93f1a38e32504ddf5",
+    "Follow": ["loksatta","jploksatta"],    
+  }
+  "Google": {
+    "ApiKey": "AIzaSyCGjDfbdk1p1sU1MVuD6g84sIP9zrmmJK0",
+    "AppSecret": "2bff5f7e932565c93f1a38e32504ddf5",
+    "Follow": ["115163745432435508679","jploksatta"],    
+  }
+}
