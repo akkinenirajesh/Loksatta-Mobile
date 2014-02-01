@@ -1,15 +1,9 @@
 package org.loksatta.android.util;
 
-/**
- * Helper class providing constants and intents common to other classes in the
- * app.
- */
 public class Utility {
 
-	public static final String BASE_URL = "https://mobile.loksatta.org/";
-
-	public static final String FEEDS = "feeds";
-
-	public static final String FEEDS_SINCE = "feeds/since/";
+	public static final String LEADER = "Leader";
+	public static final String NEWS_FEED = "News Feed";
+	public static final String VOLUNTEER = "Volunteer";
 
 }

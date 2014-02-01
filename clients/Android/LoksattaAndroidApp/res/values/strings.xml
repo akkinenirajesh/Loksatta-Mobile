@@ -7,5 +7,42 @@
     <string name="banner_text">LOK SATTA</string>
     <string name="elections_text">2014 Elections</string>
     <string name="leaders_title">Leaders</string>
+    <string name="states_title">Select State</string>
+    <string name="districts_title">Select District</string>
+    <string name="constituencies_title">Select Constituency</string>
+    <string name="leader_pic_desc">Leader Profile Picture</string>
+
+    <string-array name="states_arrays">
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
+    <string name="leader_twiiter_link">TODO</string>
+    <string name="leader_facebook_link">TODO</string>
 
 </resources>
