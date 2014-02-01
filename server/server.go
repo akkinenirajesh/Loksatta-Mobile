@@ -25,10 +25,12 @@ type Server struct {
 	db     *mgo.Session
 	config *Config
 }
+
 type GPSPosition struct {
 	Latitude  float64
 	Longitude float64
 }
+
 type User struct {
 	Id                 bson.ObjectId "_id,omitempty"
 	Name               string
@@ -40,8 +42,8 @@ type User struct {
 	EventNotifications bool
 	NotificationRadius int8
 	Locaiton           GPSPosition
-	FacebookId 	       string
-	TwitterId 	       string
+	FacebookId         string
+	TwitterId          string
 	GPlusId            string
 }
 type Feed struct {
@@ -281,7 +283,7 @@ func (server *Server) Leaders(w http.ResponseWriter, r *http.Request) {
 	}
 	result := []Leader{}
 
-	iter := c.Find(nil).Limit(500).Iter()
+	iter := c.Find(selector).Limit(500).Iter()
 	err := iter.All(&result)
 	if err != nil {
 		log.Println(err)
@@ -315,8 +317,8 @@ func SetUpRoutes(server *Server) {
 	http.Handle("/images/", http.StripPrefix("/images/", http.FileServer(http.Dir(server.config.ImagesPath))))
 
 	//Admin Section
-	a := r.PathPrefix("/admin/").Subrouter()
-	a.HandleFunc("/login", server.AdminLogin)
+	r.PathPrefix("/admin/").Subrouter()
+	//a.HandleFunc("/login", server.AdminLogin)
 
 	http.Handle("/", r)
 }
