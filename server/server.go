@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/gorilla/mux"
-	"github.com/huandu/facebook"
 	"labix.org/v2/mgo"
 	"labix.org/v2/mgo/bson"
 	"log"
@@ -15,10 +14,21 @@ import (
 )
 
 type Config struct {
-	DatabaseUrl       string
-	ImagesPath        string
-	FacebookAppId     string
-	FacebookAppSecret string
+	DatabaseUrl string
+	ImagesPath  string
+	Facebook    FacebookConfig
+	Google      GoogleConfig
+}
+type FacebookConfig struct {
+	AppId     string
+	AppSecret string
+	Follow    []string
+}
+
+type GoogleConfig struct {
+	AppId     string
+	AppSecret string
+	Follow    []string
 }
 
 type Server struct {
@@ -324,7 +334,7 @@ func SetUpRoutes(server *Server) {
 }
 
 func main() {
-	server := Server{}
+
 	var config Config
 	// read Config
 	configFile, err := os.Open("config.json")
@@ -338,12 +348,16 @@ func main() {
 		log.Println("parsing config file", err.Error())
 		os.Exit(1)
 	}
-	//log.Println(config)
-	TestFacebook(&config)
 
-	return
-
-	server.config = &config
+	if os.Args[1] == "update" {
+		Update(&config)
+	} else {
+		StartServer(&config)
+	}
+}
+func StartServer(config *Config) {
+	server := Server{}
+	server.config = config
 	//"mongodb://lsptest:lsptest@troup.mongohq.com:10051/lsp"
 	session, err := mgo.Dial(config.DatabaseUrl)
 	if err != nil {
@@ -354,36 +368,5 @@ func main() {
 
 	SetUpRoutes(&server)
 
-	{
-		// Use spdy's ListenAndServe.
-		//err := spdy.ListenAndServeTLS("localhost:443", "cert.pem", "key.pem", nil)
-		//if err != nil {
-		// handle error.
-		//log.Println(err)
-		//http.ListenAndServe(":8080", nil)
-		//}
-	}
-
-	// s := &http.Server{
-	//     Addr:           ":8080",
-	//     Handler:        myHandler,
-	//     ReadTimeout:    10 * time.Second,
-	//     WriteTimeout:   10 * time.Second,
-	//     MaxHeaderBytes: 1 << 20,
-	// }
-	// log.Fatal(s.ListenAndServe())
-	TestFacebook(server.config)
-}
-func TestFacebook(config *Config) {
-	//log.Println(config.FacebookAppId)
-	// create a global App var to hold your app id and secret.
-	var fb = facebook.New(config.FacebookAppId, config.FacebookAppSecret)
-	res, _ := facebook.Get("/150786351645251/posts?limit=1", facebook.Params{
-		"access_token": fb.AppAccessToken(),
-	})
-	r, err := json.Marshal(res)
-	if err != nil {
-		log.Println(err)
-	}
-	os.Stdout.Write(r)
+	http.ListenAndServe(":8080", nil)
 }
