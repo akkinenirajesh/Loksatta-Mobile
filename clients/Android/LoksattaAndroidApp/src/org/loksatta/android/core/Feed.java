@@ -5,6 +5,15 @@ package org.loksatta.android.core;
  */
 public class Feed extends AbstractCore {
 
+	public enum Type {
+		WEB_SITE, FACE_BOOK, TWITTER, GOOGLE_PLUS
+	}
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * Name of the Author of this feed if any
 	 */
@@ -243,6 +252,18 @@ public class Feed extends AbstractCore {
 	 */
 	public void setTwitterId(String twitterId) {
 		this.twitterId = twitterId;
+	}
+
+	public Type getType() {
+		if (facebookId != null) {
+			return Type.FACE_BOOK;
+		} else if (twitterId != null) {
+			return Type.TWITTER;
+		} else if (gPlusId != null) {
+			return Type.GOOGLE_PLUS;
+		} else {
+			return Type.WEB_SITE;
+		}
 	}
 
 }

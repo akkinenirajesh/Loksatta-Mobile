@@ -11,6 +11,14 @@
     <string name="districts_title">Select District</string>
     <string name="constituencies_title">Select Constituency</string>
     <string name="leader_pic_desc">Leader Profile Picture</string>
+    <string name="leader_twiiter_link">Twitter web link to the leader</string>
+    <string name="leader_facebook_link">Facebook web link to the leader</string>
+    <string name="leaders_link_desc">Leaders Link</string>
+    <string name="volunteers_link_desc">Volunteers Link</string>
+    <string name="gallery_link_desc">Gallery Link</string>
+    <string name="more_link_desc">More Links</string>
+    <string name="feed_pic_desc">Pictute of the Feed</string>
+    <string name="feed_action_desc">Action for the Feed</string>
 
     <string-array name="states_arrays">
         <item>Andhra Pradesh</item>
@@ -42,7 +50,5 @@
         <item>Uttarakhand</item>
         <item>West Bengal</item>
     </string-array>
-    <string name="leader_twiiter_link">TODO</string>
-    <string name="leader_facebook_link">TODO</string>
 
 </resources>

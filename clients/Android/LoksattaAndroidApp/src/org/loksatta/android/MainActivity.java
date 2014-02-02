@@ -1,5 +1,6 @@
 package org.loksatta.android;
 
+import org.loksatta.android.feed.NewsFeedActivity;
 import org.loksatta.android.leader.LeadersActivity;
 
 import android.app.ActionBar;

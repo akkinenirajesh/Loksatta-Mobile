@@ -3,6 +3,11 @@ package org.loksatta.android.core;
 public class Event extends AbstractCore {
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Title of the Event
 	 */
 	private String title;
