@@ -5,6 +5,7 @@ import java.util.Date;
 import java.util.List;
 
 import org.loksatta.android.core.Feed;
+import org.loksatta.android.core.Leader;
 import org.loksatta.android.io.FeedDeserializer;
 
 import com.google.gson.Gson;
@@ -20,7 +21,7 @@ public class DataProvider {
 	private ServerConnection c;
 	private Gson gson;
 
-	public DataProvider getInstance() {
+	public static DataProvider getInstance() {
 		if (instance == null) {
 			instance = new DataProvider();
 		}
@@ -36,7 +37,7 @@ public class DataProvider {
 	 */
 	public void init() {
 		// Initializes Connection
-		this.c = new ServerConnection(Utility.BASE_URL);
+		this.c = new ServerConnection(UrlUtility.BASE_URL);
 
 		GsonBuilder builder = new GsonBuilder();
 		builder.registerTypeAdapter(Feed.class, new FeedDeserializer());
@@ -48,12 +49,28 @@ public class DataProvider {
 	}
 
 	public void getFeeds(Date since, final Callback<List<Feed>> callback) {
-		c.makeRequest(new Request(Utility.FEEDS) {
+		c.makeRequest(new Request(UrlUtility.FEEDS) {
 
 			@Override
 			public void onResponse(String result) {
 				Feed[] fromJson = gson.fromJson(result, Feed[].class);
 				callback.onResponse(Arrays.asList(fromJson));
+			}
+
+			@Override
+			public void onFailure(Exception e) {
+
+			}
+		});
+	}
+
+	public void getLeaders(Callback<List<Leader>> callback, String state,
+			String district, String constituency) {
+		String url = UrlUtility.leaderURL(state, district, constituency);
+		c.makeRequest(new Request(url) {
+
+			@Override
+			public void onResponse(String result) {
 			}
 
 			@Override

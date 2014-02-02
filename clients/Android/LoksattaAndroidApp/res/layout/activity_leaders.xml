@@ -20,4 +20,39 @@
             android:src="@drawable/leaders_map" />
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <Spinner
+            android:id="@+id/states"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/states_arrays"
+            android:prompt="@string/states_title" />
+
+        <Spinner
+            android:id="@+id/districts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/districts_title" />
+
+        <Spinner
+            android:id="@+id/constituencies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:prompt="@string/constituencies_title" />
+
+        <GridView
+            android:id="@+id/leaders_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:horizontalSpacing="10dp"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="10dp" >
+        </GridView>
+    </LinearLayout>
+
 </RelativeLayout>

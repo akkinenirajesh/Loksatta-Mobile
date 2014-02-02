@@ -26,8 +26,9 @@
         
          <!-- Main activity -->
           <activity android:name=".MainActivity" />
-          <activity android:name=".NewsFeedActivity" />
-          <activity android:name=".LeadersActivity" />
+          <activity android:name=".feed.NewsFeedActivity" />
+          <activity android:name=".leader.LeadersActivity" />
+          <activity android:name=".leader.LeaderDetails" />
           <activity android:name=".DonateActivity" />
           <activity android:name=".VolunteersActivity" />
           <activity android:name=".AboutActivity" />

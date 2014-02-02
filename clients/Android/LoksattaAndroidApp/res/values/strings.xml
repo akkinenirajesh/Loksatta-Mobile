@@ -7,5 +7,48 @@
     <string name="banner_text">LOK SATTA</string>
     <string name="elections_text">2014 Elections</string>
     <string name="leaders_title">Leaders</string>
+    <string name="states_title">Select State</string>
+    <string name="districts_title">Select District</string>
+    <string name="constituencies_title">Select Constituency</string>
+    <string name="leader_pic_desc">Leader Profile Picture</string>
+    <string name="leader_twiiter_link">Twitter web link to the leader</string>
+    <string name="leader_facebook_link">Facebook web link to the leader</string>
+    <string name="leaders_link_desc">Leaders Link</string>
+    <string name="volunteers_link_desc">Volunteers Link</string>
+    <string name="gallery_link_desc">Gallery Link</string>
+    <string name="more_link_desc">More Links</string>
+    <string name="feed_pic_desc">Pictute of the Feed</string>
+    <string name="feed_action_desc">Action for the Feed</string>
+
+    <string-array name="states_arrays">
+        <item>Andhra Pradesh</item>
+        <item>Arunachal Pradesh</item>
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Himachal Pradesh</item>
+        <item>Jammu and Kashmir</item>
+        <item>Jharkhand</item>
+        <item>Karnataka</item>
+        <item>Kerala</item>
+        <item>Madhya Pradesh</item>
+        <item>Maharashtra</item>
+        <item>Manipur</item>
+        <item>Meghalaya</item>
+        <item>Mizoram</item>
+        <item>Nagaland</item>
+        <item>Odisha</item>
+        <item>Punjab</item>
+        <item>Rajasthan</item>
+        <item>Sikkim</item>
+        <item>Tamil Nadu</item>
+        <item>Tripura</item>
+        <item>Uttar Pradesh</item>
+        <item>Uttarakhand</item>
+        <item>West Bengal</item>
+    </string-array>
 
 </resources>

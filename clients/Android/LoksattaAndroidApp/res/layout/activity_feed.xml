@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_links"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/leaders_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/leaders_link_desc"
+            android:onClick="onLeadersClick" />
+
+        <ImageButton
+            android:id="@+id/volunteers_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/volunteers_link_desc"
+            android:onClick="onVolunteersClick" />
+
+        <ImageButton
+            android:id="@+id/gallery_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/gallery_link_desc"
+            android:onClick="onGalleryClick" />
+
+        <ImageButton
+            android:id="@+id/more_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/more_link_desc"
+            android:onClick="onMoreClick" />
+    </LinearLayout>
+
+    <org.loksatta.android.feed.NewsFeedsLayout
+        android:id="@+id/news_feed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true" />
+    </org.loksatta.android.feed.NewsFeedsLayout>
+
+</LinearLayout>

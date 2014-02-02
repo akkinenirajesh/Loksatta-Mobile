@@ -2,6 +2,11 @@ package org.loksatta.android.core;
 
 public class Leader extends AbstractCore {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * Name of the Leader
 	 */
 	private String name;
