@@ -51,6 +51,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true" />
-    </org.loksatta.android.feed.NewsFeedLayout>
+    </org.loksatta.android.feed.NewsFeedsLayout>
 
 </LinearLayout>
