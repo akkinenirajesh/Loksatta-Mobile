@@ -14,6 +14,8 @@ import com.google.gson.GsonBuilder;
 /**
  * Provides Data like Feeds, Leaders, Events etc.
  * 
+ * @author PrasannaKumar
+ * 
  */
 public class DataProvider {
 
@@ -44,10 +46,22 @@ public class DataProvider {
 		this.gson = builder.create();
 	}
 
+	/**
+	 * Get Feed since default(2months)
+	 * 
+	 * @param callback
+	 */
 	public void getFeeds(Callback<List<Feed>> callback) {
-		getFeeds(null, callback);
+		Date defaultSince = Utility.getDefaultFeedSince();
+		getFeeds(defaultSince, callback);
 	}
 
+	/**
+	 * Get News Feed since given date
+	 * 
+	 * @param since
+	 * @param callback
+	 */
 	public void getFeeds(Date since, final Callback<List<Feed>> callback) {
 		c.makeRequest(new Request(UrlUtility.FEEDS) {
 
@@ -64,6 +78,14 @@ public class DataProvider {
 		});
 	}
 
+	/**
+	 * Get Leaders from Server with given filters
+	 * 
+	 * @param callback
+	 * @param state
+	 * @param district
+	 * @param constituency
+	 */
 	public void getLeaders(Callback<List<Leader>> callback, String state,
 			String district, String constituency) {
 		String url = UrlUtility.leaderURL(state, district, constituency);

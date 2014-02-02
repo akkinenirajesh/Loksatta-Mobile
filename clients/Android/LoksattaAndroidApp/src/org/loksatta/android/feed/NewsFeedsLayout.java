@@ -5,6 +5,7 @@ import java.util.List;
 import org.loksatta.android.R;
 import org.loksatta.android.core.Feed;
 
+import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
@@ -37,61 +38,18 @@ public class NewsFeedsLayout extends LinearLayout {
 		}
 	}
 
+	/**
+	 * Adds Feed to the List View
+	 * 
+	 * @param f
+	 */
 	public void addFeed(Feed f) {
-		switch (f.getType()) {
-		case FACE_BOOK:
-			addFacebookFeed(f);
-			break;
-		case TWITTER:
-			addTwitterFeed(f);
-			break;
-		case GOOGLE_PLUS:
-			addGooglPlusFeed(f);
-			break;
-		default:
-			addWebsiteFeed(f);
-			break;
-		}
-	}
+		Activity activity = (Activity) getContext();
+		FeedLayout feedLayout = (FeedLayout) activity.getLayoutInflater()
+				.inflate(R.layout.feed_layout, null);
+		feedLayout.setFeed(f);
 
-	/**
-	 * Adds Website feed to the List
-	 * 
-	 * @param f
-	 */
-	private void addWebsiteFeed(Feed f) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
-	 * Adds GooglePlus feed to the List
-	 * 
-	 * @param f
-	 */
-	private void addGooglPlusFeed(Feed f) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
-	 * Adds Twitter Feed to the List
-	 * 
-	 * @param f
-	 */
-	private void addTwitterFeed(Feed f) {
-		// TODO Auto-generated method stub
-
-	}
-
-	/**
-	 * Adds FaceBook Feed to the List
-	 * 
-	 * @param f
-	 */
-	private void addFacebookFeed(Feed f) {
-		// TODO Auto-generated method stub
-
+		this.addView(feedLayout);
 	}
 
 }

@@ -10,24 +10,13 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <ImageView
-            android:id="@+id/feed_pic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/feed_pic_desc" />
-
         <TextView
             android:id="@+id/feed_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-        <ImageButton
-            android:id="@+id/feed_action"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/feed_action_desc" />
+            android:textStyle="bold" />
     </LinearLayout>
- 
+
     <TextView
         android:id="@+id/feed_desc"
         android:layout_width="match_parent"

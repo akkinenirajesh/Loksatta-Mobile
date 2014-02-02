@@ -17,8 +17,6 @@
     <string name="volunteers_link_desc">Volunteers Link</string>
     <string name="gallery_link_desc">Gallery Link</string>
     <string name="more_link_desc">More Links</string>
-    <string name="feed_pic_desc">Pictute of the Feed</string>
-    <string name="feed_action_desc">Action for the Feed</string>
 
     <string-array name="states_arrays">
         <item>Andhra Pradesh</item>

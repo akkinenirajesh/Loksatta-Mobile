@@ -3,7 +3,6 @@ package org.loksatta.android;
 import org.loksatta.android.feed.NewsFeedActivity;
 import org.loksatta.android.leader.LeadersActivity;
 
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
@@ -13,8 +12,8 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 
 public class MainActivity extends Activity {
-	
-	//DEFAULT NEES FEED TAB
+
+	// DEFAULT NEES FEED TAB
 	private static final int DEFAULT_TAB = 0;
 
 	private TabHost tabHost;
@@ -24,7 +23,6 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		
 		this.resources = getResources();
 		this.tabHost = (TabHost) findViewById(R.id.tabhost);
 
@@ -57,24 +55,23 @@ public class MainActivity extends Activity {
 				.setContent(intentAndroid);
 		tabHost.addTab(tab);
 	}
-	
+
 	/**
 	 * OnClick Of Top Banner
 	 * 
 	 * @param banner
 	 */
-	public void onBannerClick(View banner){
+	public void onBannerClick(View banner) {
 		tabHost.setCurrentTab(DEFAULT_TAB);
 	}
-	
 
 	/**
 	 * OnClick of 2014 Elections
 	 * 
 	 * @param btn
 	 */
-	public void onElections(View btn){
-		//TODO Link to Election Agenda page (Link is TBD)
+	public void onElections(View btn) {
+		// TODO Link to Election Agenda page (Link is TBD)
 	}
-	
+
 }
