@@ -13,42 +13,51 @@
 @end
 
 @implementation LSViewController
-@synthesize tabBarController;
+@synthesize mainView;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    [self.view setBackgroundColor:[UIColor greenColor]];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.title = @"LSP";
+    mainView =[[UIView alloc] initWithFrame:self.view.bounds];
+    mainView.backgroundColor=[UIColor whiteColor];
+    self.view=mainView;
     
-    tabBarController = [[UITabBarController alloc]init];
-    tabBarController.delegate=self;
+    UIView *buttonsView=[[UIView alloc]init];
     
-    LSNewsViewController *newsView = [[LSNewsViewController alloc]init];
-    UINavigationController *nav1=[[UINavigationController alloc]initWithRootViewController:newsView];
-    nav1.navigationBar.barStyle=UIBarStyleBlackOpaque;
-    nav1.title = @"News";
+    UIButton *leaderButton = [[UIButton buttonWithType:UIButtonTypeCustom] initWithFrame:CGRectMake(10, 20, 100, 50)];
+    [leaderButton setTitle:@"Leaders" forState:UIControlStateNormal];
+    [leaderButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [leaderButton addTarget:self action:@selector(loadLeadersView) forControlEvents:UIControlEventTouchUpInside];
     
-    LSLeadersViewController *leadersView = [[LSLeadersViewController alloc] init];
-    UINavigationController *nav2=[[UINavigationController alloc]initWithRootViewController:leadersView];
-    nav2.navigationBar.barStyle=UIBarStyleBlackTranslucent;
-    nav2.title=@"Leaders";
+    UIButton *moreButton =[[UIButton buttonWithType:UIButtonTypeCustom] initWithFrame:CGRectMake(10, 100, 100, 50)];
+    [moreButton setTitle:@"Leaders" forState:UIControlStateNormal];
+    [moreButton setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+    [moreButton addTarget:self action:@selector(moreView) forControlEvents:UIControlEventTouchUpInside];
     
-    LSDonateViewController *donateView = [[LSDonateViewController alloc]init];
-    UINavigationController *nav3=[[UINavigationController alloc]initWithRootViewController:donateView];
-    nav3.navigationBar.barStyle=UIBarStyleBlack;
-    nav3.title=@"Donate";
+    [buttonsView addSubview:leaderButton];
+    [buttonsView addSubview:moreButton];
     
-    LSVolunteerViewController *volunteerView = [[LSVolunteerViewController alloc]init];
-    UINavigationController *nav4=[[UINavigationController alloc]initWithRootViewController:volunteerView];
-    nav4.navigationBar.barStyle=UIBarStyleDefault;
-    nav4.title=@"Volunteer";
+    UITableView *newsFeedView=[self loadNewsFeed];
     
-    tabBarController.viewControllers=[NSArray arrayWithObjects:nav1,nav2,nav3,nav4, nil];
+    [mainView addSubview:buttonsView];
+    [mainView addSubview:newsFeedView];
     
-    [self.view addSubview:tabBarController.view];
+    [self.view addSubview:mainView];
+}
+
+-(id) loadNewsFeed{
+    UITableView *tableView=[[UITableView alloc]init];
+    return tableView;
+}
+
+-(void)moreView{
     
-    
+}
+
+-(void)loadLeadersView{
+    LSLeadersViewController *leadersView = [[LSLeadersViewController alloc]init];
+    [self.navigationController pushViewController:leadersView animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

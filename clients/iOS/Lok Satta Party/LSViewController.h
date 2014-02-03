@@ -12,10 +12,11 @@
 #import "LSDonateViewController.h"
 #import "LSVolunteerViewController.h"
 
-@interface LSViewController : UIViewController<UITabBarControllerDelegate>
+@interface LSViewController : UIViewController
 {
-    UITabBarController *tabBarController;
+    UIView *mainView;
 }
 
-@property(strong,nonatomic)UITabBarController *tabBarController;
+@property (nonatomic,retain)UIView *mainView;
+
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSLeader.h"
 
 @interface LSLeadersViewController : UIViewController
+{
+    UIView *imagesView;
+    NSArray *leadersArray;
+}
+@property(nonatomic,retain) UIView *imagesView;
+@property(nonatomic,retain) NSArray *leadersArray;
 
 @end

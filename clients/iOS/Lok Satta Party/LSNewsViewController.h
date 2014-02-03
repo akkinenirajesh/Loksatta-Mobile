@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LSNewsFeed.h"
 
-@interface LSNewsViewController : UIViewController
+@interface LSNewsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    UIImageView *customImage;
+}
+@property(nonatomic,retain)UIImageView *customImage;
 
 @end

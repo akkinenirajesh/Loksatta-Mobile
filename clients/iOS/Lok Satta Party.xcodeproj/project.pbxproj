@@ -22,12 +22,14 @@
 		CB237D9B18952B490088A995 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB237D7A18952B490088A995 /* UIKit.framework */; };
 		CB237DA318952B490088A995 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB237DA118952B490088A995 /* InfoPlist.strings */; };
 		CB237DA518952B490088A995 /* Lok_Satta_PartyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DA418952B490088A995 /* Lok_Satta_PartyTests.m */; };
-		CB237DB018952BF60088A995 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DAF18952BF60088A995 /* SplashView.m */; };
-		CB237DB218952C2C0088A995 /* bigicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB237DB118952C2C0088A995 /* bigicon.png */; };
 		CB237DB518952EC60088A995 /* LSNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DB418952EC60088A995 /* LSNewsViewController.m */; };
 		CB237DB818952EE50088A995 /* LSLeadersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DB718952EE50088A995 /* LSLeadersViewController.m */; };
 		CB237DBB18952F000088A995 /* LSDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DBA18952F000088A995 /* LSDonateViewController.m */; };
 		CB237DBE189533080088A995 /* LSVolunteerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB237DBD189533080088A995 /* LSVolunteerViewController.m */; };
+		CB4CF663189F519700780916 /* LSLeader.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CF65E189F519700780916 /* LSLeader.m */; };
+		CB4CF664189F519700780916 /* LSNewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CF660189F519700780916 /* LSNewsFeed.m */; };
+		CB4CF665189F519700780916 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = CB4CF662189F519700780916 /* SplashView.m */; };
+		CB4CF667189F51D300780916 /* bigicon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB4CF666189F51D300780916 /* bigicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +63,6 @@
 		CB237DA018952B490088A995 /* Lok Satta PartyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lok Satta PartyTests-Info.plist"; sourceTree = "<group>"; };
 		CB237DA218952B490088A995 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB237DA418952B490088A995 /* Lok_Satta_PartyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lok_Satta_PartyTests.m; sourceTree = "<group>"; };
-		CB237DAE18952BF60088A995 /* SplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashView.h; path = "../../Lok Satta/Lok Satta/SplashView.h"; sourceTree = "<group>"; };
-		CB237DAF18952BF60088A995 /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashView.m; path = "../../Lok Satta/Lok Satta/SplashView.m"; sourceTree = "<group>"; };
-		CB237DB118952C2C0088A995 /* bigicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigicon.png; path = ../../bigicon.png; sourceTree = "<group>"; };
 		CB237DB318952EC60088A995 /* LSNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNewsViewController.h; sourceTree = "<group>"; };
 		CB237DB418952EC60088A995 /* LSNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNewsViewController.m; sourceTree = "<group>"; };
 		CB237DB618952EE50088A995 /* LSLeadersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLeadersViewController.h; sourceTree = "<group>"; };
@@ -72,6 +71,13 @@
 		CB237DBA18952F000088A995 /* LSDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSDonateViewController.m; sourceTree = "<group>"; };
 		CB237DBC189533080088A995 /* LSVolunteerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSVolunteerViewController.h; sourceTree = "<group>"; };
 		CB237DBD189533080088A995 /* LSVolunteerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSVolunteerViewController.m; sourceTree = "<group>"; };
+		CB4CF65D189F519700780916 /* LSLeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSLeader.h; sourceTree = "<group>"; };
+		CB4CF65E189F519700780916 /* LSLeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSLeader.m; sourceTree = "<group>"; };
+		CB4CF65F189F519700780916 /* LSNewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNewsFeed.h; sourceTree = "<group>"; };
+		CB4CF660189F519700780916 /* LSNewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSNewsFeed.m; sourceTree = "<group>"; };
+		CB4CF661189F519700780916 /* SplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
+		CB4CF662189F519700780916 /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
+		CB4CF666189F51D300780916 /* bigicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bigicon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +137,13 @@
 		CB237D7C18952B490088A995 /* Lok Satta Party */ = {
 			isa = PBXGroup;
 			children = (
-				CB237DB118952C2C0088A995 /* bigicon.png */,
-				CB237DAE18952BF60088A995 /* SplashView.h */,
-				CB237DAF18952BF60088A995 /* SplashView.m */,
+				CB4CF666189F51D300780916 /* bigicon.png */,
+				CB4CF65D189F519700780916 /* LSLeader.h */,
+				CB4CF65E189F519700780916 /* LSLeader.m */,
+				CB4CF65F189F519700780916 /* LSNewsFeed.h */,
+				CB4CF660189F519700780916 /* LSNewsFeed.m */,
+				CB4CF661189F519700780916 /* SplashView.h */,
+				CB4CF662189F519700780916 /* SplashView.m */,
 				CB237D8518952B490088A995 /* LSAppDelegate.h */,
 				CB237D8618952B490088A995 /* LSAppDelegate.m */,
 				CB237D8818952B490088A995 /* Main_iPhone.storyboard */,
@@ -262,7 +272,7 @@
 			files = (
 				CB237D8D18952B490088A995 /* Main_iPad.storyboard in Resources */,
 				CB237D9218952B490088A995 /* Images.xcassets in Resources */,
-				CB237DB218952C2C0088A995 /* bigicon.png in Resources */,
+				CB4CF667189F51D300780916 /* bigicon.png in Resources */,
 				CB237D8A18952B490088A995 /* Main_iPhone.storyboard in Resources */,
 				CB237D8118952B490088A995 /* InfoPlist.strings in Resources */,
 			);
@@ -286,10 +296,12 @@
 				CB237DBE189533080088A995 /* LSVolunteerViewController.m in Sources */,
 				CB237DB518952EC60088A995 /* LSNewsViewController.m in Sources */,
 				CB237D8318952B490088A995 /* main.m in Sources */,
-				CB237DB018952BF60088A995 /* SplashView.m in Sources */,
+				CB4CF664189F519700780916 /* LSNewsFeed.m in Sources */,
 				CB237D8718952B490088A995 /* LSAppDelegate.m in Sources */,
 				CB237D9018952B490088A995 /* LSViewController.m in Sources */,
 				CB237DB818952EE50088A995 /* LSLeadersViewController.m in Sources */,
+				CB4CF663189F519700780916 /* LSLeader.m in Sources */,
+				CB4CF665189F519700780916 /* SplashView.m in Sources */,
 				CB237DBB18952F000088A995 /* LSDonateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +521,7 @@
 				CB237DAA18952B490088A995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CB237DAB18952B490088A995 /* Build configuration list for PBXNativeTarget "Lok Satta PartyTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +530,7 @@
 				CB237DAD18952B490088A995 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
