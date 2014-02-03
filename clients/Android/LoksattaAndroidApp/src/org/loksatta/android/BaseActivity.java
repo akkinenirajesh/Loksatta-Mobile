@@ -3,11 +3,9 @@ package org.loksatta.android;
 import org.loksatta.android.util.DataProvider;
 
 import android.app.Activity;
-import android.content.Context;
-import android.util.AttributeSet;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 /**
  * Base for all Activities
@@ -25,16 +23,10 @@ public abstract class BaseActivity extends Activity {
 	}
 
 	@Override
-	protected void onChildTitleChanged(Activity childActivity,
-			CharSequence title) {
-		super.onChildTitleChanged(childActivity, title);
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
 		setContentView(viewResId);
-	}
-
-	@Override
-	public View onCreateView(String name, Context context, AttributeSet attrs) {
 		init();
-		return super.onCreateView(name, context, attrs);
 	}
 
 	/**
@@ -45,6 +37,7 @@ public abstract class BaseActivity extends Activity {
 
 	@Override
 	protected void onStart() {
+		super.onStart();
 		initData();
 	}
 

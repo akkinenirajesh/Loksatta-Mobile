@@ -1,6 +1,6 @@
 package org.loksatta.android.util;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,6 +18,8 @@ import com.google.gson.GsonBuilder;
  * 
  */
 public class DataProvider {
+
+	private static final boolean TEST_DATE = true;
 
 	private static DataProvider instance;
 	private ServerConnection c;
@@ -63,12 +65,16 @@ public class DataProvider {
 	 * @param callback
 	 */
 	public void getFeeds(Date since, final Callback<List<Feed>> callback) {
+		if (TEST_DATE) {
+			callback.onResponse(getSampleFeed());
+			return;
+		}
 		c.makeRequest(new Request(UrlUtility.FEEDS) {
 
 			@Override
 			public void onResponse(String result) {
-				Feed[] fromJson = gson.fromJson(result, Feed[].class);
-				callback.onResponse(Arrays.asList(fromJson));
+				// Feed[] fromJson = gson.fromJson(result, Feed[].class);
+				// callback.onResponse(Arrays.asList(fromJson));
 			}
 
 			@Override
@@ -76,6 +82,22 @@ public class DataProvider {
 
 			}
 		});
+	}
+
+	public ArrayList<Feed> getSampleFeed() {
+		Feed f = new Feed();
+		f.setTitle("Dr.JP's Letter to The President of India on AP Reorganization Bill");
+		f.setSummary("30th January, 2014 To Shri Pranab Mukherjee Honourable President of India Rashtrapati Bhavan, New Delhi –"
+				+ " 110004 Esteemed Rashtrapati Shri Pranab Mukherjee ji, The Andhra Pradesh Legislative Assembly has,"
+				+ " on January 30, 2014, adopted a resolution opposing the Andhra Pradesh...");
+
+		Feed f2 = new Feed();
+		f2.setTitle("Lok Satta organizing satyagraha by women victims of liquor");
+		f2.setSummary("The Lok Satta Party is organizing a satyagraha by women victims of the liquor menace from 10 am to 2 pm on Saturday, February 1 at Picket Grounds be...");
+		ArrayList<Feed> list = new ArrayList<Feed>();
+		list.add(f);
+		list.add(f2);
+		return list;
 	}
 
 	/**

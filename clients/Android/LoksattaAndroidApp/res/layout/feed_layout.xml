@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<org.loksatta.android.feed.FeedLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/news_feed"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/feed_header"
@@ -29,4 +30,4 @@
         android:orientation="horizontal" >
     </LinearLayout>
 
-</LinearLayout>
+</org.loksatta.android.feed.FeedLayout>

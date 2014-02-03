@@ -13,9 +13,14 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
-        <TextView android:text="@string/leaders_title" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/leaders_title" />
 
         <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@string/app_name"
             android:src="@drawable/leaders_map" />
     </LinearLayout>

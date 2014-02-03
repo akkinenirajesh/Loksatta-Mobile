@@ -10,7 +10,9 @@ import org.loksatta.android.leader.LeadersActivity;
 import org.loksatta.android.util.Callback;
 
 import android.content.Intent;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ListView;
 
 /**
  * Activity for HomeScreen of the App
@@ -21,7 +23,7 @@ import android.view.View;
 public class NewsFeedActivity extends BaseActivity implements
 		Callback<List<Feed>> {
 
-	private NewsFeedsLayout newsFeed;
+	private FeedAdaper feedAdapter;
 
 	public NewsFeedActivity() {
 		super(R.layout.activity_feed);
@@ -29,7 +31,9 @@ public class NewsFeedActivity extends BaseActivity implements
 
 	@Override
 	protected void init() {
-		this.newsFeed = (NewsFeedsLayout) findViewById(R.id.news_feed);
+		ListView newsFeed = (ListView) findViewById(R.id.news_feed);
+		this.feedAdapter = new FeedAdaper(this);
+		newsFeed.setAdapter(feedAdapter);
 	}
 
 	@Override
@@ -39,7 +43,8 @@ public class NewsFeedActivity extends BaseActivity implements
 
 	@Override
 	public void onResponse(List<Feed> result) {
-		newsFeed.showFeed(result);
+		feedAdapter.init(result);
+		feedAdapter.notifyDataSetChanged();
 	}
 
 	public void onLeadersClick(View view) {
@@ -60,6 +65,12 @@ public class NewsFeedActivity extends BaseActivity implements
 
 	public void onMoreClick(View view) {
 
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		return super.onOptionsItemSelected(item);
 	}
 
 }
