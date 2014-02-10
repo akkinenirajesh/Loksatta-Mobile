@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"errors"
+	"flag"
 	"github.com/gorilla/mux"
 	"labix.org/v2/mgo"
 	"labix.org/v2/mgo/bson"
@@ -335,6 +336,9 @@ func SetUpRoutes(server *Server) {
 
 func main() {
 
+	updatePtr := flag.Bool("update", false, "update database from sources")
+	flag.Parse()
+
 	var config Config
 	// read Config
 	configFile, err := os.Open("config.json")
@@ -349,7 +353,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if os.Args[1] == "update" {
+	if *updatePtr {
 		Update(&config)
 	} else {
 		StartServer(&config)
